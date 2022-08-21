@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Noto+Sans&display=swap');
+
+:root {
+    --background: #083C5D;
+    --primary: #328CC1;
+    --secondary: #D9B310;
+    --accent: #1D2731;
+    --text: ivory;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    /* font-family: 'Noto Sans', sans-serif; */
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-with-label-unit{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.input-with-label-unit > span > input {
+    width: 50px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+nav {
+    background-color: var(--accent);
+    margin-bottom: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.flag {
+    height: 25px;
+    aspect-ratio: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sex-select-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section {
+    margin: 5px;
+    /* border: 1px solid var(--secondary); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+table {
+    align-self: center;
+}
+
+.sex-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.icon-selected path{
+    fill: var(--secondary)!important;
+}
+
+path {
+    fill: var(--primary)!important;
+    transition-delay: 0.5s;
+    transition: fill 0.3s ease-in;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 300px;
+    margin: 10px;
+}
+td {
+    width: 100px;
+    text-align: left;
+}
+
+.output {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+output {
+    margin: 0px 5px;
+    min-width: 50px;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.meal-kcal-label,
+.meal-kcal {
+    text-align: right;
+    width: 25%;
+}
+
+.meal-kcal {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+.meal-perc,
+.meal-perc-label {
+    width: 25%;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    width: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    appearance: none;
+    height: 20px;
+    position: relative;
+    background-color: var(--primary);
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+input[type=checkbox]::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    transition: left 0.2s ease-in;
+}
+
+input[type=checkbox]:checked::before {
+    left: 30px;
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 400px) {
+    .nav-content {
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    #nav_title {
+        order: 1;
+        flex-basis: 100%;
+    }
+    #nav_sel1 {
+        order: 2;
+    }
+    #nav_sel2 {
+        order: 3;
+    }
+    
+}
